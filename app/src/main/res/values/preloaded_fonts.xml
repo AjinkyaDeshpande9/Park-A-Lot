@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/fenix</item>
         <item>@font/lato_bold</item>
+        <item>@font/poppins</item>
+        <item>@font/roboto</item>
     </array>
 </resources>
