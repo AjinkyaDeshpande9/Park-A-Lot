@@ -22,10 +22,10 @@ public class Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         mName = findViewById(R.id.regName);
-        mEmail = findViewById(R.id.regVecType);
-        mPassword = findViewById(R.id.regVecNumber);
+        mEmail = findViewById(R.id.regEmail);
+        mPassword = findViewById(R.id.regPassword);
         mCPassword = findViewById(R.id.regConPassword);
-        mProceedButton = findViewById(R.id.Verifybutton);
+        mProceedButton = findViewById(R.id.Proceedbutton);
         mLogin = findViewById(R.id.loginHere);
 
         mLogin.setOnClickListener(new View.OnClickListener() {
@@ -35,42 +35,47 @@ public class Registration extends AppCompatActivity {
             }
         });
 
-
         mProceedButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String email = mEmail.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
+            public void onClick(View v)
+            {
+            String email = mEmail.getText().toString().trim();
+            String password = mPassword.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email)) {
+                if(TextUtils.isEmpty(email))
+                {
                     mEmail.setError("Email is Required.");
                     return;
                 }
-                if (TextUtils.isEmpty(password)) {
+
+                if(TextUtils.isEmpty(password))
+                {
                     mPassword.setError("Password is Required.");
                     return;
                 }
 
-                if (password.length() < 6) {
+                if(password.length() < 6)
+                {
                     mPassword.setError("Password must be atleast 6 characters long");
+                    return;
                 }
 
-                else
-                    {
-                        startActivity(new Intent(getApplicationContext(), VehicleRegistration.class));
-                    }
+//                if(mCPassword.toString() != mPassword.toString())
+//                {
+//                    mCPassword.setError("Password do not match");
+//                }
 
+                else
+                {
+                    startActivity(new Intent(getApplicationContext(),VehicleRegistration.class));
+                }
+
+
+                progressBar.setVisibility(View.VISIBLE);
             }
         });
     }
 }
-                //check this code
-//                {
-//                    if (mCPassword.equals(mPassword)) {
-//                        startActivity(new Intent(getApplicationContext(), VehicleRegistration.class));
-//                    } else
-//                        mCPassword.setError("Password does not match");
-//                }
-//                        progressBar.setVisibility(View.VISIBLE);
+
 
 

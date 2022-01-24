@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">LoginRegister</string>
     <string name="name">Name</string>
-    <string-array name="VehichleTypes">
-        <item>Two wheeler</item>
-        <item>Three wheeler</item>
-        <item>Four wheeler</item>
-
-    </string-array>
-
+    <string name="select">Select Vehicle Type</string>
 </resources>

@@ -8,42 +8,39 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class VehicleRegistration extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    private Spinner spinner;
-    Button mProceedButton;
+public class VehicleRegistration extends AppCompatActivity {
+    String[] items = {"Two Wheeler","Three Wheeler","Four Wheeler"};
+    AutoCompleteTextView autoCompleteTxt;
+    ArrayAdapter<String> adapterItems;
+    Button mProceed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_registration);
-        spinner = findViewById(R.id.spinner2);
-        mProceedButton.setOnClickListener(new View.OnClickListener() {
+
+        autoCompleteTxt = findViewById(R.id.regvehicleType);
+        mProceed = findViewById(R.id.Proceedbutton2);
+        adapterItems = new ArrayAdapter<String>(this,R.layout.list_items,items);
+        autoCompleteTxt.setAdapter(adapterItems);
+
+        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), MobileRegistration.class));
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = parent.getItemAtPosition(position).toString();
             }
-            });
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.VehichleTypes, android.R.layout.simple_spinner_dropdown_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        });
 
-        spinner.setOnItemSelectedListener(this);
+        mProceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),MobileRegistration.class));
+            }
+        });
     }
-
-
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String choice = adapterView.getItemAtPosition(i).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
-
 }
