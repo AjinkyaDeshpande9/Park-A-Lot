@@ -80,6 +80,7 @@
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <EditText
         android:id="@+id/regVecNumber"
         android:layout_width="315dp"

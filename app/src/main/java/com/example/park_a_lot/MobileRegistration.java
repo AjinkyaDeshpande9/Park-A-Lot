@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MobileRegistration extends AppCompatActivity {
     Button mSendOTP, mVerifyButton;
     TextView mResendOTP;
-    EditText mOTP1,mOTP2,mOTP3,mOTP4,mOTP5,mOTP6;
+    EditText mOTP1,mOTP2,mOTP3,mOTP4,mOTP5,mOTP6,mNumber;
 
 
     @Override
@@ -22,18 +22,22 @@ public class MobileRegistration extends AppCompatActivity {
         mSendOTP = findViewById(R.id.SendOTP);
         mVerifyButton = findViewById(R.id.Verifybutton);
         mResendOTP = findViewById(R.id.resendOtp);
+        mNumber = findViewById(R.id.RegMob);
         mSendOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mVerifyButton.setVisibility(View.VISIBLE);
-                mResendOTP.setVisibility(View.VISIBLE);
-                mSendOTP.setVisibility(View.INVISIBLE);
-                mOTP1.setVisibility(View.VISIBLE);
-                mOTP2.setVisibility(View.VISIBLE);
-                mOTP3.setVisibility(View.VISIBLE);
-                mOTP4.setVisibility(View.VISIBLE);
-                mOTP5.setVisibility(View.VISIBLE);
-                mOTP6.setVisibility(View.VISIBLE);
+                if(mNumber.length() == 10){
+                    mVerifyButton.setVisibility(View.VISIBLE);
+                    mResendOTP.setVisibility(View.VISIBLE);
+                    mSendOTP.setVisibility(View.INVISIBLE);
+                    mOTP1.setVisibility(View.VISIBLE);
+                    mOTP2.setVisibility(View.VISIBLE);
+                    mOTP3.setVisibility(View.VISIBLE);
+                    mOTP4.setVisibility(View.VISIBLE);
+                    mOTP5.setVisibility(View.VISIBLE);
+                    mOTP6.setVisibility(View.VISIBLE);
+                }
+
             }
         });
     }

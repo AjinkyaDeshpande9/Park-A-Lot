@@ -23,7 +23,7 @@ public class VehicleRegistration extends AppCompatActivity {
     ArrayAdapter<String> adapterItems;
     Button mProceed;
     EditText mName, mEmail, mPassword, mVecNumber, mMobNumber;
-
+    String mVectype;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -33,7 +33,6 @@ public class VehicleRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_registration);
-
         mName = findViewById(R.id.regName);
         mEmail = findViewById(R.id.regEmail);
         mPassword = findViewById(R.id.regPassword);
@@ -61,20 +60,13 @@ public class VehicleRegistration extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                rootNode= FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("Users") ;
-
-                //Getting all the values
-                String uName = ;
-                String uEmail = mEmail.getText().toString();
-                String uPassword = mPassword.getText().toString();
-                String uMobNumber = mMobNumber.getText().toString();
-                String uVecNumber = mVecNumber.getText().toString();
-               // String uVectype = mVectype.getText().toString();
-
-           //     UserHelperClass helperClass = new UserHelperClass(uName,uEmail,uPassword,uMobNumber,uVecNumber);
-
-                reference.setValue("First test");
+//
+//                rootNode= FirebaseDatabase.getInstance();
+//                reference = rootNode.getReference("Users") ;
+//                //get values
+//                String name = mName.getEditableText().
+//
+//                        reference.setValue("First test");
 
 
             }
