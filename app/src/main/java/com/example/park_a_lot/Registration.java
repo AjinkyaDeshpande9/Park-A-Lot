@@ -67,7 +67,7 @@ public class Registration extends AppCompatActivity {
 
                 else
                 {
-                    startActivity(new Intent(getApplicationContext(),VehicleRegistration.class));
+                    startActivity(new Intent(getApplicationContext(),MobileRegistration.class));
                 }
 
 
