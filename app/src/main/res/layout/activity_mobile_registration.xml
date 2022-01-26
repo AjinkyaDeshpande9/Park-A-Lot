@@ -59,89 +59,10 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/Verifybutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.302" />
-
-    <TextView
-        android:id="@+id/OTP4"
-        android:layout_width="44dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="7dp"
-        android:backgroundTint="#0D1723"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/OTP5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/OTP3"
-        app:layout_constraintTop_toBottomOf="@+id/RegMob" />
-
-    <TextView
-        android:id="@+id/OTP1"
-        android:layout_width="44dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#0D1723"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/OTP2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegMob" />
-
-    <TextView
-        android:id="@+id/OTP3"
-        android:layout_width="44dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#0D1723"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/OTP4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/OTP2"
-        app:layout_constraintTop_toBottomOf="@+id/RegMob" />
-
-    <TextView
-        android:id="@+id/OTP6"
-        android:layout_width="44dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="56dp"
-        android:backgroundTint="#0D1723"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/OTP5"
-        app:layout_constraintTop_toBottomOf="@+id/RegMob" />
-
-    <TextView
-        android:id="@+id/OTP2"
-        android:layout_width="44dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#0D1723"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/OTP3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/OTP1"
-        app:layout_constraintTop_toBottomOf="@+id/RegMob" />
-
-    <TextView
-        android:id="@+id/OTP5"
-        android:layout_width="44dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="7dp"
-        android:backgroundTint="#0D1723"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/OTP6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/OTP4"
-        app:layout_constraintTop_toBottomOf="@+id/RegMob" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/SendOTP"
@@ -201,7 +122,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Verifybutton" />
 
+    <EditText
+        android:id="@+id/Userotp"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:textColorHint="#B4BAC1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/SendOTP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegMob"
+        app:layout_constraintVertical_bias="0.4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-

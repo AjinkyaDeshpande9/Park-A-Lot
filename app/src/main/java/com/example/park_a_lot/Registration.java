@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class Registration extends AppCompatActivity {
     EditText mName, mEmail, mPassword, mCPassword;
     TextView mLogin;
     Button mProceedButton;
     ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,39 +42,30 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-            String email = mEmail.getText().toString().trim();
-            String password = mPassword.getText().toString().trim();
+            String name = mName.getText().toString();
+            String email = mEmail.getText().toString();
+            String password = mPassword.getText().toString();
+            String cpassword = mCPassword.getText().toString();
 
-                if(TextUtils.isEmpty(email))
+
+                if(TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(cpassword))
                 {
+                    Toast.makeText(Registration.this,"All Fields are Required", Toast.LENGTH_SHORT).show();
+                    mName.setError("Name is Required.");
                     mEmail.setError("Email is Required.");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(password))
-                {
                     mPassword.setError("Password is Required.");
-                    return;
+                    mCPassword.setError("Password is Required.");
                 }
-
-                if(password.length() < 6)
-                {
-                    mPassword.setError("Password must be atleast 6 characters long");
-                    return;
-                }
-
-//                if(mCPassword.toString() != mPassword.toString())
-//                {
-//                    mCPassword.setError("Password do not match");
-//                }
-
                 else
                 {
-                    startActivity(new Intent(getApplicationContext(),MobileRegistration.class));
+                    if(password.equals(cpassword)){
+                       startActivity(new Intent(getApplicationContext(),MobileRegistration.class));
+                       progressBar.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        mCPassword.setError("Password does not match.");
+                    }
                 }
-
-
-                progressBar.setVisibility(View.VISIBLE);
             }
         });
     }

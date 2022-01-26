@@ -21,9 +21,9 @@ public class VehicleRegistration extends AppCompatActivity {
     String[] items = {"Two Wheeler","Three Wheeler","Four Wheeler"};
     AutoCompleteTextView autoCompleteTxt;
     ArrayAdapter<String> adapterItems;
-    Button mProceed;
+    Button mSubmitbtn;
     EditText mName, mEmail, mPassword, mVecNumber, mMobNumber;
-    String mVectype;
+    AutoCompleteTextView mVectype;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -38,9 +38,10 @@ public class VehicleRegistration extends AppCompatActivity {
         mPassword = findViewById(R.id.regPassword);
         mVecNumber = findViewById(R.id.regVecNumber);
         mMobNumber = findViewById(R.id.RegMob);
+        mVectype = findViewById(R.id.regvehicleType);
 
         autoCompleteTxt = findViewById(R.id.regvehicleType);
-        mProceed = findViewById(R.id.Submitbtn);
+        mSubmitbtn = findViewById(R.id.Submitbtn);
         adapterItems = new ArrayAdapter<String>(this,R.layout.list_items,items);
         autoCompleteTxt.setAdapter(adapterItems);
 
@@ -56,17 +57,28 @@ public class VehicleRegistration extends AppCompatActivity {
         });
 
 
-        mProceed.setOnClickListener(new View.OnClickListener() {
+        mSubmitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                rootNode= FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("Users") ;
 
+                //Getting all the values
+                String uName = getIntent().getStringExtra("uName");
+                String uEmail = getIntent().getStringExtra("uEmail");
+                String uPassword = getIntent().getStringExtra("uPassword");
+                String uMobNumber = getIntent().getStringExtra("uMobNumber");
+                String uVecNumber = getIntent().getStringExtra("uVecNumber");
+                String uVectype = getIntent().getStringExtra("uVectype");
+
+//                UserHelperClass helperClass = new UserHelperClass(uName,uEmail,uPassword,uMobNumber,uVecNumber,uVectype);
+//                       reference.setValue(helperClass);
+
+                startActivity( new Intent(getApplicationContext(),MainActivity.class));
 //
-//                rootNode= FirebaseDatabase.getInstance();
-//                reference = rootNode.getReference("Users") ;
 //                //get values
 //                String name = mName.getEditableText().
 //
-//                        reference.setValue("First test");
 
 
             }
