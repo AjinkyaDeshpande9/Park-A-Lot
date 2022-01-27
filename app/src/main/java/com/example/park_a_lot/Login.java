@@ -30,7 +30,6 @@ public class Login extends AppCompatActivity {
     TextView mRegister;
     private GoogleSignInClient mGoogleSignInClient;
     private final static  int RC_SIGN_IN = 123;
-    ImageView GLogin;
     private FirebaseAuth mAuth;
 
     @Override

@@ -116,7 +116,7 @@ public class MobileRegistration extends AppCompatActivity {
                         } else {
                             // if the code is not correct then we are
                             // displaying an error message to the user.
-                            Toast.makeText(MobileRegistration.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(MobileRegistration.this, "Invalid OTP!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
