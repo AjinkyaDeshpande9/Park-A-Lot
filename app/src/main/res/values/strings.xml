@@ -2,5 +2,15 @@
     <string name="app_name">LoginRegister</string>
     <string name="name">Name</string>
     <string name="select">Select Vehicle Type</string>
-    <string name="default_web_client_id1" translatable = "false">124150744001-aa9e5g47cu2khmh7nf8ok2r0gh52fed7.apps.googleusercontent.com</string>
+    <string name="default_web_client_id1" translatable="false">124150744001-aa9e5g47cu2khmh7nf8ok2r0gh52fed7.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="about_us">About Us</string>
+    <string name="user">User</string>
+    <string name="user123">user123</string>
 </resources>

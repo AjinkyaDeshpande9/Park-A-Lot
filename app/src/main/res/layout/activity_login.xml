@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/regName"
+        android:id="@+id/logName"
         android:layout_width="297dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/regVecNumber"
+        android:id="@+id/logPassword"
         android:layout_width="297dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -59,7 +59,7 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regName" />
+        app:layout_constraintTop_toBottomOf="@+id/logName" />
 
     <TextView
         android:id="@+id/textView6"
@@ -71,7 +71,7 @@
         android:textColor="#000"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regVecNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/logPassword" />
 
     <TextView
         android:id="@+id/textView7"

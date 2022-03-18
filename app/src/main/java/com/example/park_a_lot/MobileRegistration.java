@@ -3,6 +3,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,10 +31,14 @@ public class MobileRegistration extends AppCompatActivity {
     Button verifyOTPBtn, generateOTPBtn;
     String verificationId;
     TextView mResend;
+    Users users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_mobile_registration);
         mAuth = FirebaseAuth.getInstance();
         edtPhone = findViewById(R.id.RegMob);
@@ -94,6 +100,13 @@ public class MobileRegistration extends AppCompatActivity {
                     // if OTP field is not empty calling
                     // method to verify the OTP.
                     verifyCode(edtOTP.getText().toString());
+
+                    int phone = Integer.parseInt(edtPhone.getText().toString().trim());
+                    users.setPhone(phone);
+                    Intent intent = new Intent(MobileRegistration.this,VehicleRegistration.class);
+                    intent.putExtra("passphone",phone);
+
+
                 }
             }
         });
@@ -123,7 +136,7 @@ public class MobileRegistration extends AppCompatActivity {
     }
 
     private void sendVerificationCode(String number) {
-          PhoneAuthOptions options =
+        PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber(number)            // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit

@@ -11,11 +11,14 @@
         <entry key="..\:/Computer Engineering/Mini Project/Park-A-Lot/app/src/main/res/layout/list_items.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/drawable/btn_bg.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.157" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1495" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/drawable/round_textbox.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/font/fenix.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/font/lato_bold.xml" value="0.19444444444444445" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/aboutus_fragment.xml" value="0.10869565217391304" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_mobile_registration.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_register.xml" value="0.22" />
@@ -23,7 +26,17 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_signin.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/activity_vehicle_registration.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/dashboard_fragmen.xml" value="0.10869565217391304" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/dashboard_fragment.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/drawer_menu.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/fragment_about_us.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/fragment_dashboard.xml" value="0.10869565217391304" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/fragment_profile.xml" value="0.10869565217391304" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/item_option.xml" value="0.10869565217391304" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/list_items.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/myprofile_fragment.xml" value="0.10869565217391304" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/layout/nav_header.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/menu/my_navigation_items.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Park-A-Lot/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19444444444444445" />
       </map>
     </option>
